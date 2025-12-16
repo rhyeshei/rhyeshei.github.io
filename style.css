@@ -147,7 +147,7 @@ font-style: normal;
   /* 左側画像部分 */
   .about-item img {
     width: 600px;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     filter: grayscale(100%);
   }
@@ -219,18 +219,18 @@ font-style: normal;
   .works-contents {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     gap: 100px 30px;
     position: relative;
+    padding: 0 4%;
   }
   
   .works-items {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 80px; /* 適宜調整 */
+    margin-bottom: 0; /* 適宜調整 */
+    align-items: flex-start;
   }
   
   .image-block {
@@ -239,24 +239,23 @@ font-style: normal;
     aspect-ratio: 3/5;
     overflow: hidden;
     display: flex;
+    align-items: flex-end;
   }
   
   .vertical-text {
-    width: 4%;
+    width: fit-content;
     writing-mode: vertical-rl;
-    text-orientation: mixed;
     transform: rotate(180deg);
-    font-size: 14px;
+    font-size: 20px;
     color: #F9F9F6;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
     height: 100%;
-    padding-top: 12px;
+    flex-shrink: 0;
+    align-self: flex-end;
+    margin-bottom: 5px;
   }
   
   .image-wrapper {
-    width: 96%;
+    flex: 1;
     height: 100%;
   }
   
@@ -269,13 +268,13 @@ font-style: normal;
   
   .horizontal-text {
   width: 100%;  
-  margin-top: 12px;
-  padding-left: 4%; /* ←縦書きと画像と揃える */
+  margin-top: 20px;
+  padding-left: 30px; /* ←縦書きと画像と揃える */
   text-align: left;
 }
 
 .horizontal-text .title {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
   color: #F9F9F6;
 }
@@ -312,7 +311,7 @@ font-style: normal;
   }
   
   .horizontal-text .title {
-    font-size: 13px;
+    font-size: 20px;
     font-weight: bold;
     color: #000;
   }
