@@ -202,6 +202,7 @@ font-style: normal;
   }
   
   .bio-en{
+    font-family: 'Castoro', serif; /* TitlingなしのCastoroを指定 */
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 40px;
